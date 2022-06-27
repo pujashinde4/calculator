@@ -1,0 +1,89 @@
+#include<stdio.h>
+int display(int num1,int num2);
+int add(int num1,int num2);
+int sub(int num1,int num2);
+int div(int num1,int num2);
+int mul(int num1,int num2);
+int suq(int num1);
+int find_num(int num,int num2);
+int sum=0,minus=0,division=1,multi=1,squre=1,divisible;
+int main()
+{
+int num1,num2,n,ch;
+//accepting number from user
+printf("\nenter the number 1");
+scanf("%d",&num1);
+printf("\nenter the number 2");
+scanf("%d",&num2);
+printf("enter the value of n");
+scanf("%d",&n);
+
+//using switch case
+do{
+    printf("1:display 2 number\n2:add 2 number\n3:substract two number\n4:division two number\n5:multiplication of two number \n6:square of number is");
+    printf("chooce operation you want to perform(1,2,3,4,5,6,7):");
+    scanf("%d",&ch);
+  switch(ch)
+{
+case 1:display(num1,num2);
+       break;
+case 2:add(num1,num2);
+       break;
+case 3:sub(num1,num2);
+       break;
+case 4:div(num1,num2);
+       break;
+case 5:mul(num1,num2);
+       break;
+case 6:suq(num1);
+       break;
+case 7:find_num(num1,num2);
+       break;
+default:printf("invalid input");
+       break;
+}printf("\ndo you want to continue 1:yes,no:0\n");
+scanf("%d",&ch);
+}while(ch!=0);
+return 0;
+}
+//display numbers
+int display(int num1,int num2)
+{
+printf("num1=%d\nnum2=%d",num1,num2);
+}
+//display addition
+int add(int num1,int num2)
+{
+sum=num1+num2;
+printf("\naddition of two number is %d",sum);
+}
+//display substrcation
+int sub(int num1,int num2)
+{
+minus=num1-num2;
+printf("\nubstraction of two number is %d",minus);
+}
+//display division
+int div(int num1,int num2)
+{
+division=num1/num2;
+printf("\ndivision of two number is %d",division);
+}
+//display multiplication
+int mul(int num1,int num2)
+{
+multi=num1*num2;
+printf("\nmultiplication of two number is %d",multi);
+}
+//display square
+int suq(int num1)
+{
+ squre=num1*num1;
+printf("\nqaure of number is %d",squre);
+}
+//divisible by other number
+int find_num(int num1,int num2)
+{
+   divisible=num1%num2; 
+   printf("\ndivisible:%d",divisible);
+}
